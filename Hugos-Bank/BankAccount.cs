@@ -11,7 +11,7 @@ namespace Hugos_Bank
         // Stores values for the bank account.
         private String Code;
         private String AccountNumber;
-        private float Balance;
+        private float Balance = 0.0f;
 
         // Constructor for the BankAccount class.
         public BankAccount(String code, String accountNumber)

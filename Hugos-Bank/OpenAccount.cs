@@ -15,8 +15,9 @@ namespace Hugos_Bank
         public OpenAccount()
         {
             InitializeComponent();
+            
         }
-
+        Bank bank = new Bank();
         private bool ValidatePassword(String pwd)
         {
             if (string.IsNullOrWhiteSpace(pwd))
@@ -35,10 +36,9 @@ namespace Hugos_Bank
             }
 
         }
-
-        private void CreateBankAccount (String Passcode)
+        private String GenerateBankNumber ()
         {
-
+            return "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,7 +46,10 @@ namespace Hugos_Bank
             String Password = codeBox.Text;
             if (ValidatePassword(Password))
             {
-                CreateBankAccount(Password);
+                //CreateBankAccount(Password);
+                bank.CreateBankAccount(Password, GenerateBankNumber());
+
+                // Make it change control to the main thing and log in with the correct account.
             }
             else
             {

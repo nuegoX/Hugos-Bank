@@ -17,7 +17,7 @@ namespace Hugos_Bank
             this.dateTime = dateTime;
             this.Amount = Amount;
             this.ReceiverAccount = ReceiverAccount;
-            this.SenderAccount = SenderAccount;
+            this.SenderAccount = SenderAccount; 
         }
     }
 }

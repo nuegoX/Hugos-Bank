@@ -9,9 +9,10 @@ namespace Hugos_Bank
     internal class Bank
     {
         private List<BankAccount> accounts;
-        public void AddAccountToList ()
+        private List<Transaction> transactions;
+        public void CreateBankAccount (String code, String AccountNumber)
         {
-
+            accounts.Add(new BankAccount(code, AccountNumber));
         }
         public void RemoveAccountFromList ()
         {
