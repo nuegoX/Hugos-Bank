@@ -10,24 +10,24 @@ namespace Hugos_Bank
     {
         // Stores values for the bank account.
         private String Code;
-        private int AccountNumber;
-        private int Balance;
+        private String AccountNumber;
+        private float Balance;
 
         // Constructor for the BankAccount class.
-        public BankAccount(string code, int accountNumber)
+        public BankAccount(String code, String accountNumber)
         {
             Code = code;
             AccountNumber = accountNumber;
         }
 
         // Method for adding x amount to the account.
-        private void AddBalance (int Amount)
+        private void AddBalance (float Amount)
         {
             Balance += Amount;
         }
 
         // Method for removing x amount from the account.
-        private void DeductBalance (int Amount)
+        private void DeductBalance (float Amount)
         {
             Balance -= Amount;
         }
