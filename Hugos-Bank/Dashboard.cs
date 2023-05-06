@@ -15,10 +15,24 @@ namespace Hugos_Bank
         public Dashboard(String balance)
         {
             InitializeComponent();
-            label3.Text = balance;
+            label2.Text = balance;
+        }
+        public void UpdateCode (String code)
+        {
+            label3.Text = code;
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
