@@ -12,9 +12,15 @@ namespace Hugos_Bank
 {
     public partial class Dashboard : UserControl
     {
-        public Dashboard()
+        public Dashboard(String balance)
         {
             InitializeComponent();
+            label3.Text = balance;
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

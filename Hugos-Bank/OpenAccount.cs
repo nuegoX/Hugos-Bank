@@ -46,7 +46,7 @@ namespace Hugos_Bank
                 bank.CreateBankAccount(Password);
 
                 
-                Dashboard dashboard = new Dashboard();
+                Dashboard dashboard = new Dashboard("Hello");
 
                
                 this.Parent.Controls.Add(dashboard);

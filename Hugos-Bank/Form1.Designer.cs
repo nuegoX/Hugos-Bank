@@ -30,7 +30,7 @@
         {
             this.openAccount1 = new Hugos_Bank.OpenAccount();
             this.userControl11 = new Hugos_Bank.UserControl1();
-            this.dashboard1 = new Hugos_Bank.Dashboard();
+            this.dashboard1 = new Hugos_Bank.Dashboard("");
             this.SuspendLayout();
             // 
             // openAccount1

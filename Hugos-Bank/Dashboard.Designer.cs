@@ -84,6 +84,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Dashboard";
             this.Size = new System.Drawing.Size(774, 508);
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

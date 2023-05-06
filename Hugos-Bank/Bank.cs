@@ -30,8 +30,9 @@ namespace Hugos_Bank
 
         }
 
-        public Bank() { 
-        
+        public Bank() {
+            accounts = new List<BankAccount>();
+            transactions = new List<Transaction>();
         }
     }
 }
