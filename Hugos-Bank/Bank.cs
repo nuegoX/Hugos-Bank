@@ -10,22 +10,28 @@ namespace Hugos_Bank
     {
         private List<BankAccount> accounts;
         private List<Transaction> transactions;
-        public void CreateBankAccount (String code, String AccountNumber)
-        {
-            accounts.Add(new BankAccount(code, AccountNumber));
-        }
-        public void RemoveAccountFromList ()
-        {
 
+        private String GenerateAccountNumber ()
+        {
+            return "136421";
         }
+        public void CreateBankAccount (String code)
+        {
+            accounts.Add(new BankAccount(code, GenerateAccountNumber(), 0.0f));
+        }
+
         public void GetAccountInfo ()
         {
 
         }
-        public void Transact ()
+
+        public void MakeTransaction ()
         {
 
         }
-        public Bank() { }
+
+        public Bank() { 
+        
+        }
     }
 }

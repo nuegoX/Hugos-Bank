@@ -14,10 +14,11 @@ namespace Hugos_Bank
         private float Balance = 0.0f;
 
         // Constructor for the BankAccount class.
-        public BankAccount(String code, String accountNumber)
+        public BankAccount(String code, String accountNumber, float balance)
         {
             Code = code;
             AccountNumber = accountNumber;
+            Balance = balance;
         }
 
         // Method for adding x amount to the account.

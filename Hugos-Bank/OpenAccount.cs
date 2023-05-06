@@ -36,10 +36,6 @@ namespace Hugos_Bank
             }
 
         }
-        private String GenerateBankNumber ()
-        {
-            return "";
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -47,7 +43,16 @@ namespace Hugos_Bank
             if (ValidatePassword(Password))
             {
                 //CreateBankAccount(Password);
-                bank.CreateBankAccount(Password, GenerateBankNumber());
+                bank.CreateBankAccount(Password);
+
+                
+                Dashboard dashboard = new Dashboard();
+
+               
+                this.Parent.Controls.Add(dashboard);
+
+             
+                dashboard.BringToFront();
 
                 // Make it change control to the main thing and log in with the correct account.
             }

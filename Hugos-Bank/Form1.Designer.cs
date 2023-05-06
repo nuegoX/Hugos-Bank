@@ -30,6 +30,7 @@
         {
             this.openAccount1 = new Hugos_Bank.OpenAccount();
             this.userControl11 = new Hugos_Bank.UserControl1();
+            this.dashboard1 = new Hugos_Bank.Dashboard();
             this.SuspendLayout();
             // 
             // openAccount1
@@ -48,11 +49,20 @@
             this.userControl11.TabIndex = 0;
             this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
             // 
+            // dashboard1
+            // 
+            this.dashboard1.Location = new System.Drawing.Point(49, 118);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(774, 508);
+            this.dashboard1.TabIndex = 2;
+            this.dashboard1.Visible = false;
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 708);
+            this.Controls.Add(this.dashboard1);
             this.Controls.Add(this.openAccount1);
             this.Controls.Add(this.userControl11);
             this.Name = "LogIn";
@@ -65,6 +75,7 @@
 
         private UserControl1 userControl11;
         private OpenAccount openAccount1;
+        private Dashboard dashboard1;
     }
 }
 

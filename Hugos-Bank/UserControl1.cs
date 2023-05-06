@@ -29,5 +29,9 @@ namespace Hugos_Bank
             openAccount.BringToFront();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Make control for logging into existing account.
+        }
     }
 }
