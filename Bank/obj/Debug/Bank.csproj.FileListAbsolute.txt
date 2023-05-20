@@ -1,0 +1,11 @@
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\bin\Debug\Bank.exe.config
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\bin\Debug\Bank.exe
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\bin\Debug\Bank.pdb
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.csproj.AssemblyReference.cache
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.csproj.SuggestedBindingRedirects.cache
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.Form1.resources
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.Properties.Resources.resources
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.csproj.GenerateResource.cache
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.csproj.CoreCompileInputs.cache
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.exe
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.pdb
