@@ -14,7 +14,7 @@ namespace Bank
     public partial class Form1 : Form
     {
         public static Form1 Instance;
-        Bank bank = new Bank();
+        public Bank bank = new Bank();
         public Form1()
         {
             InitializeComponent();
@@ -38,13 +38,20 @@ namespace Bank
 
             foreach (Account acc in bank.accounts)
             {
-                // Perform your logic here with each account
-                // For example, you can check if the username and password match an account
                 if (acc.Username == username && acc.Password == password)
                 {
-                    // Account found, do something
-                    // ...
-                    break; // Exit the loop since we found a matching account
+                    // TODO: Assign user to the CurrentUser name and remove the from the list, and then go to the dashboard and render everything with appropriate labels.
+                    bank.currentUser = acc;
+                    break;
+                }
+                if (bank.currentUser != null)
+                {
+                    // found a matching account. Now you can reference the object as needed.
+                    // The object is still within the accountList, so there is no duplicate.
+                }
+                else
+                {
+                    // No matching account found
                 }
             }
         }

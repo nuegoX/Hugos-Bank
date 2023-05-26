@@ -14,11 +14,12 @@ namespace Bank
 
         }
         public List<Account> accounts = new List<Account>();
+        public Account currentUser = null;
 
         private String RandomizeCardnumber ()
         {
             Random random = new Random();
-            String bin = "123456"; // Replace with your desired BIN
+            String bin = "123456"; 
             String cardNumber = bin;
 
             // Generate the remaining 10 digits randomly
@@ -42,7 +43,7 @@ namespace Bank
         }
         public void LoginUser ()
         {
-
+            
         }
 
     }
