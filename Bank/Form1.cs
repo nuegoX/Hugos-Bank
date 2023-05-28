@@ -42,6 +42,7 @@ namespace Bank
                 {
                     // TODO: Assign user to the CurrentUser name and remove the from the list, and then go to the dashboard and render everything with appropriate labels.
                     bank.currentUser = acc;
+                    
                     break;
                 }
                 if (bank.currentUser != null)
