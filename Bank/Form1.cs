@@ -42,7 +42,9 @@ namespace Bank
                 {
                     // TODO: Assign user to the CurrentUser name and remove the from the list, and then go to the dashboard and render everything with appropriate labels.
                     bank.currentUser = acc;
-                    
+                    Form2 form2 = new Form2();
+                    form2.Show();
+                    Hide();
                     break;
                 }
                 if (bank.currentUser != null)
@@ -57,5 +59,9 @@ namespace Bank
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

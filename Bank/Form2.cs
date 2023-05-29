@@ -16,5 +16,15 @@ namespace Bank
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Transfer money
+            String Receiver = textBox1.Text;
+            String Amount = textBox2.Text;
+            float number;
+            bool success = float.TryParse(Amount, out number);
+            Console.WriteLine(number.ToString());
+        }
     }
 }
