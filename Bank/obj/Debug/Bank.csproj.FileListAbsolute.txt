@@ -20,3 +20,4 @@ C:\Users\hugo.wikstrom\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.csproj.Ge
 C:\Users\hugo.wikstrom\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.csproj.CoreCompileInputs.cache
 C:\Users\hugo.wikstrom\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.exe
 C:\Users\hugo.wikstrom\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.pdb
+C:\Users\nuego\Documents\GitHub\Hugos-Bank\Bank\obj\Debug\Bank.Form2.resources

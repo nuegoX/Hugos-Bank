@@ -15,36 +15,19 @@ namespace Bank
         }
         public List<Account> accounts = new List<Account>();
         public Account currentUser = null;
+        public Account targetUser = null;
 
-        private String RandomizeCardnumber ()
+        public void CreateAccount (string Username, string Password, float Balance)
         {
-            Random random = new Random();
-            String bin = "123456"; 
-            String cardNumber = bin;
-
-            // Generate the remaining 10 digits randomly
-            for (int i = 0; i < 10; i++)
-            {
-                int randomNumber = random.Next(0, 10);
-                cardNumber += randomNumber;
-            }
-
-            return cardNumber;
+            Account currentUser = new Account(Username, Password, Balance);
+            accounts.Add(new Account(Username, Password, Balance));
         }
-        public void CreateAccount (string Username, string Password, int Pincode, int Cardnumber, float Balance)
+        public void RegisterAccount (string Username, string Password, float Balance)
         {
-            Account currentUser = new Account(Username, Password, Pincode, Cardnumber, Balance);
-            accounts.Add(new Account(Username, Password, Pincode, Cardnumber, Balance));
-        }
-        public void RegisterAccount (string Username, string Password, int Pincode, int Cardnumber, float Balance)
-        {
-            Account currentUser = new Account(Username, Password, Pincode, Cardnumber, Balance);
+            currentUser = new Account(Username, Password, Balance);
             accounts.Add(currentUser);
         }
-        public void LoginUser ()
-        {
-            
-        }
+
 
     }
 
@@ -53,16 +36,14 @@ namespace Bank
         public String Username;
         public String Password;
         public int Pincode;
-        public int Cardnumber;
+
         public float Balance;
 
-        public Account(string Username, string Password, int Pincode, int Cardnumber, float Balance)
+        public Account(string Username, string Password, float Balance)
         {
             this.Username = Username;
             this.Password = Password;
-            this.Cardnumber = Cardnumber;
             this.Balance = Balance;
-            this.Pincode = Pincode;
         }
 
     }
