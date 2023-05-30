@@ -25,10 +25,7 @@ namespace Bank
 
         private void Form1_Load (object sender, EventArgs e)
         {
-            // TODO:
-            // Create a bank object and then through inheritance all possible bank accounts through loading in a text file that is created if it doesn't exist already.
-           
-
+    
             
         }
 
@@ -79,43 +76,66 @@ namespace Bank
         {
             string username = textBox1.Text;
             string password = textBox2.Text;
+            bool UserExists = false;
 
             if (ValidUsername(username) && ValidPassword(password))
             {
 
             foreach (Account acc in bank.accounts)
             {
-                if (acc.Username == username && acc.Password == password)
+                if (acc.Username == username)
                 {
-                    // TODO: Assign user to the CurrentUser name and remove the from the list, and then go to the dashboard and render everything with appropriate labels.
-                    bank.currentUser = acc;
-                    Form2 form2 = new Form2();
+                    UserExists = true;
+                    if(acc.Password != password)
+                    {
+                        Console.WriteLine("Incorrect password.");
+                            label2.Visible = true;
+                        break;
+                    } 
+                        else
+                        {
+                            // TODO: Assign user to the CurrentUser name and remove the from the list, and then go to the dashboard and render everything with appropriate labels.
+                            bank.currentUser = acc;
+                            Form2 form2 = new Form2();
 
-                    form2.Show();
-                    Hide();
-                    break;
+                            form2.Show();
+                            Hide();
+                            break;
+                        }
                 }
-                if (bank.currentUser != null)
-                {
-                    // found a matching account. Now you can reference the object as needed.
-                    // The object is still within the accountList, so there is no duplicate.
-                }
-                else
-                {
-                    // No matching account found. Register account..
-                    bank.RegisterAccount(username, password, 0.0f);
-                    Form2 form2 = new Form2();
-                    form2.Show();
-                    Hide();
-                    break;
+                if (!UserExists)
+                    {
+                        // No matching account found. Register account.
+
+                        // Checking if account with username exists:
+
+                        bank.RegisterAccount(username, password, 0.0f);
+                        Form2 form2 = new Form2();
+                        form2.Show();
+                        Hide();
+                        break;
+                    }
+
                 }
             }
-            } else
+            else
             {
-                Console.WriteLine("Username and/or Password is invalid.");
+                label1.Visible = true;
+            }
+            
+        }
+        /*
+        private bool AccountExists (string username)
+        {
+            foreach(Account acc in bank.accounts)
+            {
+                if(acc.Username = username)
+                {
+                    return true;
+                }
             }
         }
-
+        */
         private void button2_Click(object sender, EventArgs e)
         {
 

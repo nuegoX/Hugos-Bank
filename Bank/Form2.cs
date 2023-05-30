@@ -69,8 +69,17 @@ namespace Bank
 
             if (success)
             {
-                Form1.Instance.bank.currentUser.Balance = Form1.Instance.bank.currentUser.Balance + number;
-                UpdateLabels();
+                // So you can't deposit a negative amount.
+                if (number > 0)
+                {
+                    Form1.Instance.bank.currentUser.Balance = Form1.Instance.bank.currentUser.Balance + number;
+                    UpdateLabels();
+                }
+                else
+                {
+                    Console.WriteLine("Has to be above 0");
+                }
+                
             }
             else
             {
@@ -87,7 +96,7 @@ namespace Bank
 
             if (success)
             {
-                if (Form1.Instance.bank.currentUser.Balance - number >= 0) {
+                if (Form1.Instance.bank.currentUser.Balance - number >= 0 && number > 0) {
                     Form1.Instance.bank.currentUser.Balance = Form1.Instance.bank.currentUser.Balance - number;
                     UpdateLabels();
                 }
