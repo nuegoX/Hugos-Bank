@@ -130,5 +130,10 @@ namespace Bank
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form1.Instance.SaveAccounts();
+        }
     }
 }

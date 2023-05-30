@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,13 +18,16 @@ namespace Bank
     {
         public static Form1 Instance;
         public Bank bank = new Bank();
+
         public Form1()
         {
             InitializeComponent();
             Instance = this;
             bank.CreateAccount("Admin", "Password",  10.0f);
 
+           
         }
+
 
         private void Form1_Load (object sender, EventArgs e)
         {
@@ -125,18 +130,7 @@ namespace Bank
             }
             
         }
-        /*
-        private bool AccountExists (string username)
-        {
-            foreach(Account acc in bank.accounts)
-            {
-                if(acc.Username = username)
-                {
-                    return true;
-                }
-            }
-        }
-        */
+
         private void button2_Click(object sender, EventArgs e)
         {
 
