@@ -27,10 +27,9 @@ namespace Bank
             String Amount = textBox2.Text;
             float number;
             bool success = float.TryParse(Amount, out number);
-            Console.WriteLine(number.ToString());
+            bool FoundUser = false;
 
-            if (success)
-                
+            if (success && number > 0)    
             {
                 // Do you have enough balance for the transaction?
                 if (number <= Form1.Instance.bank.currentUser.Balance) { 
@@ -40,6 +39,7 @@ namespace Bank
                     {
                         if (acc.Username == Receiver)
                         {
+                            FoundUser = true;
                             Form1.Instance.bank.targetUser = acc;
                             Console.WriteLine("Found target user.");
 
@@ -47,10 +47,23 @@ namespace Bank
                             Form1.Instance.bank.currentUser.Balance -= number;
                             Form1.Instance.bank.targetUser.Balance += number;
                             UpdateLabels();
+                            label12.Visible = false;
                             break;
                         }
                     }
+                    if (!FoundUser) 
+                    {
+                        label12.Visible = true;
+                    }
                 }
+                else
+                {
+                    label12.Visible = true;
+                }
+            }
+            else
+            {
+                label12.Visible = true;
             }
         }
 
@@ -74,10 +87,12 @@ namespace Bank
                 {
                     Form1.Instance.bank.currentUser.Balance = Form1.Instance.bank.currentUser.Balance + number;
                     UpdateLabels();
+                    label10.Visible = false;
                 }
                 else
                 {
                     Console.WriteLine("Has to be above 0");
+                    label10.Visible = true;
                 }
                 
             }
@@ -99,10 +114,12 @@ namespace Bank
                 if (Form1.Instance.bank.currentUser.Balance - number >= 0 && number > 0) {
                     Form1.Instance.bank.currentUser.Balance = Form1.Instance.bank.currentUser.Balance - number;
                     UpdateLabels();
+                    label11.Visible = false;
                 }
                 else
                 {
                     Console.WriteLine("Insufficient balance.");
+                    label11.Visible = true;
                 }
                 
             }

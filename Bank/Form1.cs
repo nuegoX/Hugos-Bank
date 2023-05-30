@@ -21,6 +21,7 @@ namespace Bank
             InitializeComponent();
             Instance = this;
             bank.CreateAccount("Admin", "Password",  10.0f);
+
         }
 
         private void Form1_Load (object sender, EventArgs e)
@@ -89,7 +90,7 @@ namespace Bank
                     if(acc.Password != password)
                     {
                         Console.WriteLine("Incorrect password.");
-                            label2.Visible = true;
+                        label2.Visible = true;
                         break;
                     } 
                         else
@@ -140,5 +141,6 @@ namespace Bank
         {
 
         }
+
     }
 }
