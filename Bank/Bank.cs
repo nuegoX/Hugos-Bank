@@ -13,10 +13,16 @@ namespace Bank
         {
 
         }
+        // List for all the accounts.
         public List<Account> accounts = new List<Account>();
+
+        // Variable for the current logged in user.
         public Account currentUser = null;
+
+        // Variable for the selected user to transfer money to.
         public Account targetUser = null;
 
+        // Method for creating an account and adding to the list.
         public void CreateAccount (string Username, string Password, float Balance)
         {
             Account currentUser = new Account(Username, Password, Balance);
@@ -30,13 +36,12 @@ namespace Bank
 
 
     }
-
+    
+    [Serializable]
     public class Account
     {
         public String Username;
         public String Password;
-        public int Pincode;
-
         public float Balance;
 
         public Account(string Username, string Password, float Balance)

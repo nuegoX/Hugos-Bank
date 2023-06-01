@@ -71,6 +71,9 @@ namespace Bank
         {
             label1.Text = Form1.Instance.bank.currentUser.Username;
             label3.Text = "Your balance: " + Form1.Instance.bank.currentUser.Balance.ToString() +"$";
+
+            // Accessing the fuction to save all the changes to the file.
+            Form1.Instance.SerializeBankAccountsToFile(Form1.Instance.bank.accounts, Form1.Instance.filePath);
         }
 
         private void button2_Click(object sender, EventArgs e)
